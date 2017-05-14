@@ -27,8 +27,15 @@ function buttonsOn() {
   document.getElementById('reset-button').removeAttribute("disabled");
 }
 //Place user inout into guess field after ENTER pressed //
-guessButton.onClick = userGuess;
 function userGuess () {
+  if (userInput < randomNum) {
+    //too low
+  }
+  else if (userInput > randomNum) {
+    //too high
+  } else {
+    //correct!!
+  }
 
     var guessNumber = parseInt
 }
