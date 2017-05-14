@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0 auto;
+  font-family: 'Open Sans', sans-serif;
+}
+
+div {
+  margin: center;
+
+}
+
+main {
+  /*padding-left: 25%;
+  padding-right: 25%;*/
+  margin: 0 auto;
+  width: 300px;
+}
+
+#input-section {
+  margin: 40px auto;
+  border: 3px solid #e6e7e8;
+  color: #e6e7e8;
+  font-weight: 300;
+  padding: 5px;
+}
+
+#guess-section {
+  margin: 50px;
+  text-align: center;
+}
+input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+
+}
+
+header {
+  background-color: #404041;
+  margin: auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+}
+
+button {
+  background-color: #929497;
+  border-radius: 100px;
+  color: #FFFFFF;
+  font-weight: 300;
+}
+
+button:hover {
+  background-color: #EB008B;
+  /*border: 3px solid #d0d2d3;*/
+
+}
+button:disabled {
+  background-color: #d0d2d3;
+  border: 3px solid #d0d2d3;
+}
+
+h1 {
+  color: #EB008B;
+}
+
+span {
+  color: #e6e7e8;
+  font-weight: 300;
+}
+
+#guess-button {
+  width: 140px;
+  height: 30px;
+  font-size: 16px;
+  float: left;
+}
+#clear-button {
+  width: 140px;
+  height: 30px;
+  font-size: 16px;
+  float: right;
+}
+
+#reset-button {
+  width: 100%;
+  font-size: 14px;
+}
+
+#guess-form {
+
+
+}
+#display-guess {
+  color: #eb008b;
+  font-size: 120px;
+}
+
+.magenta-text {
+  font-color: #ED458B;
+}
