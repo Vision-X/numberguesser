@@ -17,6 +17,7 @@ guessButton.addEventListener('click', function() {
   userGuess(input);
 
 })
+// ----------------- watch extra lines bm --------------------- //
 
 //clear button
 clearButton.addEventListener('click', function() {
@@ -29,6 +30,7 @@ function buttonsOn() {
   document.getElementById('clear-button').removeAttribute("disabled");
   document.getElementById('reset-button').removeAttribute("disabled");
 }
+// ------------------- Tell me about why you chose to put the event listener buttonsOn() in your HTML instead of adding one here in your JS file like you do with the others? bm --------------------- //
 
 //Place user inout into guess field after ENTER pressed //
 function userGuess (userGuess) {
@@ -73,6 +75,14 @@ resetButton.addEventListener('click', function() {
   lastGuess.innerText='';
 })
 
+// ----------------- I'd love to see you break out lines 72-74 into a separate function, for instance a function called "clearFields()" and its only job would be to clear the input fields. bm --------------------- //
+
+// ----------------- To avoid repeteating yourself when doing repetitive tasks, look into using a loop to save yourself some work, like this: 
+// var buttons = document.querySelectorAll('.button');
+// for (var i=0; i < buttons.length; i++) {
+//     buttons[i].setAttribute("disabled", true);
+// }
+// ----------------- this means you need to have each of the buttons share a class that applies to all of them, in this case it would be '.button' bm ------------------- //
 
 //random Number generator function
 function randomNumber () {
