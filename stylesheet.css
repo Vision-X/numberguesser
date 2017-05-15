@@ -18,6 +18,7 @@ div {
   margin: center;
 
 }
+/*************** Watch spacing in your CSS file - remove extra lines to keep things consistant bm ******************/
 
 main {
   /*padding-left: 25%;
@@ -25,6 +26,7 @@ main {
   margin: 0 auto;
   width: 300px;
 }
+/*************** Remove extra comments before submitting for eval bm ******************/
 
 #input-section {
   margin: 40px auto;
@@ -43,6 +45,7 @@ input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer
     margin: 0;
 
 }
+/****************** Keep an eye on extra spacing here but you should also separate independent rules (#guess-section and input) with an empty line bm ******************/
 
 header {
   background-color: #404041;
@@ -90,6 +93,15 @@ span {
   font-size: 16px;
   float: right;
 }
+
+/************** Because both of the selectors above share the exact same rules, you can save space and time by listing them together with a comma like so:
+#guess-button, #clear-button {
+  width: 140px;
+  height: 30px;
+  font-size: 16px;
+  float: right;
+}
+***************/
 
 #reset-button {
   width: 100%;

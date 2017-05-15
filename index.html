@@ -5,6 +5,7 @@
     <link rel="stylesheet" type:"text/css" href="stylesheet.css" />
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,700" rel="stylesheet">
     <!-- <script type="text/javascript" src="index.js"></script> -->
+ <!-- Try to remove any comments before submitting code unless it's important information to the reviewer bm -->
   </head>
 
   <body>
@@ -13,17 +14,20 @@
   </header>
     <main>
       <div>
+<!-- You probably don't need both a <div> AND a <section> tag here, the <section id="input-section"> should do the trick bm --> 
       <section id='input-section'>
         <input type='number' name='enter-guess' id='guess-form' placeholder="Enter your guess"
         aria-label="User input area" onkeyup="buttonsOn()"/>
+<!-- Great use of aria-label here! bm -->
       </div>
       <div>
         <button name='guess' id='guess-button' disabled='disabled'>Guess</button>
 
         <button name='clear' id='clear-button' disabled= 'disabled'>Clear</button>
+<!-- The 'disabled' property will default to true when added as an attribute to a button, so you can remove the ='disabled' part bm --> 
       </div>
       </section>
-
+<!-- Keep an eye on your nesting in the section/div above. Looks like you have those <div> tags breaking up your <section> in a strange way. Keep child elements cleanly nested within parent elements bm --> 
       <section id='guess-section'>
         <p id='last-guess'> Your last guess was </p>
         <p id='display-guess'>  </p>
