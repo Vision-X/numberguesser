@@ -1,19 +1,21 @@
 var userInput = document.getElementById("guess-form");
 var displayGuess = document.getElementById('display-guess');
 var guessButton = document.querySelector('#guess-button');
-var clearButton= document.getElementById('clear-button');
+var clearButton = document.getElementById('clear-button');
 var displayHighLow = document.getElementById('display-high-low');
-
+var resetButton = document.getElementById('reset-button');
+var lastGuess = document.getElementById('last-guess');
 var randomNum = randomNumber();
-var min = 0
-var max = 100
+var min = 0;
+var max = 100;
 
 //guess button functionality
 guessButton.addEventListener('click', function() {
   var input = userInput.value;
   displayGuess.innerText=input;
   userInput.value='';
-  userGuess(input)
+  userGuess(input);
+
 })
 
 //clear button
@@ -31,22 +33,46 @@ function buttonsOn() {
 //Place user inout into guess field after ENTER pressed //
 function userGuess (userGuess) {
   console.log(randomNum);
-  if (userGuess < randomNum) {
+  // if (isNaN(userGuess)) {
+  //   displayHighLow.innerText='Guess a fucking number dude';
+  // }
+  if (userGuess < 1 || userGuess > 100) {
+    displayHighLow.innerText = 'Please guess a number between 1 and 100';
+    // displayGuess.innerText = 'Your last guess was';
+  }
+  else if (userGuess === isNaN) {
+    // displayGuess.innerText = 'Your last guess was';
+    displayHighLow.innerText = 'That is not a number';
+  }
+  else if (userGuess < randomNum) {
     //too low
-    displayHighLow.innerText='Lowwwww';
+    // displayGuess.innerText = 'Your last guess was';
+    displayHighLow.innerText='That is too low';
   }
   else if (userGuess > randomNum) {
     //too high
-    displayHighLow.innerText='Highhhh';
+    // displayGuess.innerText = 'Your last guess was';
+    displayHighLow.innerText='That is too high';
   } else {
   //correct!!
-    displayHighLow.innerText='Winnerrrrr';
+    // displayGuess.innerText = 'Your last guess was';
+    displayHighLow.innerText='BOOM!';
 
     randomNum = randomNumber();
   }
 }
 
 //reset button functionality
+resetButton.addEventListener('click', function() {
+  userInput.value = '';
+  document.getElementById('guess-button').setAttribute( "disabled", true);
+  document.getElementById('clear-button').setAttribute("disabled", true);
+  document.getElementById('reset-button').setAttribute("disabled", true);
+  displayGuess.innerText='';
+  displayHighLow.innerText='';
+  lastGuess.innerText='';
+})
+
 
 //random Number generator function
 function randomNumber () {

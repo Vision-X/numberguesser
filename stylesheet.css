@@ -35,7 +35,7 @@ main {
 }
 
 #guess-section {
-  margin: 50px;
+  margin: 25px;
   text-align: center;
 }
 input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button {
@@ -93,11 +93,12 @@ span {
 
 #reset-button {
   width: 100%;
+  height: 20px;
   font-size: 14px;
 }
-
-#guess-form {
-
+#last-guess {
+  color:  #404041;
+  font-size: 16px;
 
 }
 #display-guess {
@@ -105,6 +106,6 @@ span {
   font-size: 120px;
 }
 
-.magenta-text {
+/*.magenta-text {
   font-color: #ED458B;
-}
+}*/
